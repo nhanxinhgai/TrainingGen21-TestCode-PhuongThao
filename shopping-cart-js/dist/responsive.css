@@ -1,0 +1,92 @@
+/* mobile & Tablet */
+@media (max-width: 1023px){
+    .hide-on-moblie-tablet {
+        display: none;
+    }
+    .card-block{
+        padding-top: 0px!important;
+    }
+   
+}
+
+/* Talet  */
+@media (min-width :740px) and (max-width:1023px){
+    .hide-on-moblie-tablet {
+        display: none;
+    }
+    .header_item{
+        margin-left:50px;
+    }
+    .row{
+        margin-top:-30px;
+
+    }
+    .item-count{
+        width: 80px !important;
+        text-align: center;
+    }
+    .delete-item,
+    .minus-item,
+    .plus-item{
+        width: 50px !important
+    }
+    .show-cart{
+        font-size:1.4rem;
+    }
+    .product_item-img{
+        height: 160px;
+    } 
+    
+}
+
+/* Mobile  */
+@media (max-width:739px){
+    .hide-on-moblie{
+        display: none;
+    }
+    #slider_img{
+        width:100%;
+    }
+    .header_logo{
+        width:50%;
+    }
+    .card-title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+    .slider{
+        margin-top:80px;
+    }
+    .header{
+        height: 80px;
+    }
+    .header_list{
+        padding:15px 20px;
+    }
+    .row{
+        margin-top:-30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .delete-item,
+    .minus-item,
+    .plus-item{
+        width: 40px !important
+    }
+    .show-cart{
+        font-size:1.2rem;
+    }
+    .footer_content-heading{
+        padding:0 16px 10px;
+    }
+    .col{
+        padding-right: 2px;
+        padding-left:2px;
+    }
+    .product_item-img{
+        height: 140px;
+    } 
+
+}

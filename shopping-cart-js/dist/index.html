@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Shopping cart JS</title>
+  <link rel="stylesheet " href="./main.css">
+  <link rel="stylesheet" href='./grid.css'>
+  <link rel="stylesheet" href='./font/fontawesome-free-5.15.2/css/all.min.css'>
+  <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="header_list">
+        <img src = "./img/logophonglan.png" class="header_logo">
+        <div class="header_item hide-on-moblie">
+            <a style="text-decoration:none;" href="#"><div class="header_item-link active ">Trang Chủ</div></a>
+            <div class="header_item-link">Chăm sóc lan</div>
+            <div class="line"></div>
+        </div>
+        <!-- <div class="search-btn">
+            <i class="search-icon ti-search"></i>
+        </div> -->
+        <nav class="navbar ">
+          <!-- <div class="row">
+              <div class="col"> -->
+                <i class="fas fa-cart-plus shooping_cart" data-toggle="modal" data-target="#cart">
+                  <span class="total-count"></span>
+                </i>
+                <!-- <button class="clear-cart btn btn-danger">Clear Cart</button> -->
+              <!-- </div> -->
+          <!-- </div> -->
+      </nav>
+    </div>
+</header>
+
+
+<!-- partial:index.partial.html -->
+<!-- Nav -->
+
+
+<!-- slider -->
+
+<div class="content_wrap">
+
+  <div class="slider">
+    <img id ="slider_img" src="./img/hoalan5.gif" onclick="changeImages()" alt="">
+    <div class="slider_content hide-on-moblie">
+        <h1 class="slider_content-heading">Hoa Phong Lan</h1>
+        <h2 class = "slider_content-subheading">Với vẻ đẹp kiêu sa và mùi hương quyến rũ, hoa phong lan đã vô cùng được yêu thích bởi giới quý tộc ở Anh. Chính vẻ đẹp của mình mà loài hoa này được gọi là Nữ hoàng trong các loài hoa.</h2>
+        <p class="slider_content-paragrap">
+            Núi rừng khoe sắc một loài hoa<br>
+            Bám chặt trên cây, bão chẳng sa.<br>
+            Lỗng lẫy Phong Lan phô cánh ngọc<br>
+            Tươi xinh “đóa gió” lộ bông ngà<br><br>
+            <p class="slider_content-paragrap hide-on-moblie-tablet">
+            Giỏ treo cửa sổ vui lòng mẹ<br>
+            Dàn móc ngoài hiên hợp ý ba.<br>
+            Cùng cốc thâm sơn về phố thị<br>
+            Điểm tô vẻ đẹp những ngôi nhà.
+          </p>
+        </p>
+    </div>
+  </div>
+ 
+  <div class = "slider_heart">
+    <i class="fas fa-heart"></i>
+  </div>
+  
+  
+  <!-- Main -->
+  <div class="app_container">
+    <div class="grid wide">
+      <div class="row">
+        <div class="col c-6 l-2-4 m-3">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan11.png" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan kiếm vàng</h4>
+              <h4 class="product_item-price card-text ">Price: $50</h4>
+              <a href="#" data-name="Lan_kiếm_vàng" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan22.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan hồ điệp</h4>
+              <h4 class="product_item-price card-text ">Price: $60</h4>
+              <a href="#" data-name="Lan_hồ_điệp" data-price="60" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan33.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan quế hồng</h4>
+              <h4 class="product_item-price card-text ">Price: $80</h4>
+              <a href="#" data-name="Lan_rừng_hồng" data-price="80" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan44.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan phi điệp</h4>
+              <h4 class="product_item-price card-text ">Price: $100</h4>
+              <a href="#" data-name="Lan_phi_điệp" data-price="100" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan55.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan quế tím</h4>
+              <h4 class="product_item-price card-text ">Price: $110</h4>
+              <a href="#" data-name="Lan_quế_tím" data-price="110" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan66.png" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan phượng vĩ </h4>
+              <h4 class="product_item-price card-text ">Price: $200</h4>
+              <a href="#" data-name="Lan_phượng_vĩ_đỏ" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan77.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan rừng</h4>
+              <h4 class="product_item-price card-text ">Price: $120</h4>
+              <a href="#" data-name="Lan_rừng" data-price="120" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan88.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan điệp vàng</h4>
+              <h4 class="product_item-price card-text ">Price: $78</h4>
+              <a href="#" data-name="Lan_điệp_vàng" data-price="78" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan99.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan điệp vàng</h4>
+              <h4 class="product_item-price card-text ">Price: $120</h4>
+              <a href="#" data-name="Lan_vĩ_vàng" data-price="120" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan111.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan quý hiếm</h4>
+              <h4 class="product_item-price card-text ">Price: $100</h4>
+              <a href="#" data-name="Lan_mặt_quỷ" data-price="100" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan112.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan rừng</h4>
+              <h4 class="product_item-price card-text ">Price: $110</h4>
+              <a href="#" data-name="Lan_rừng" data-price="110" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan113.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan hồ điệp vàng</h4>
+              <h4 class="product_item-price card-text ">Price: $89</h4>
+              <a href="#" data-name="Lan_hồ_điệp_vàng" data-price="89" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan114.png" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan tuyết cam</h4>
+              <h4 class="product_item-price card-text ">Price: $99</h4>
+              <a href="#" data-name="Lan_tuyết_cam" data-price="99" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan115.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan điệp tím</h4>
+              <h4 class="product_item-price card-text ">Price: $200</h4>
+              <a href="#" data-name="Lan_điệp_tím" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan116.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan xịn</h4>
+              <h4 class="product_item-price card-text ">Price: $89</h4>
+              <a href="#" data-name="Lan_xịn_xò" data-price="89" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan117.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan vàng trồng </h4>
+              <h4 class="product_item-price card-text ">Price: $50</h4>
+              <a href="#" data-name="Lan_vàng_trồng" data-price="50" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan118.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan quý hịn</h4>
+              <h4 class="product_item-price card-text ">Price: $88</h4>
+              <a href="#" data-name="Lan_quí_hịn_hò" data-price="88" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan119.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan hiếm</h4>
+              <h4 class="product_item-price card-text ">Price: $100</h4>
+              <a href="#" data-name="Lan_hiếm_lạ" data-price="100" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12 ">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan200.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan rừng</h4>
+              <h4 class="product_item-price card-text ">Price: $40</h4>
+              <a href="#" data-name="Lan_rừng" data-price="40" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col c-6 l-2-4 m-3 c-12">
+          <div class="product_item" >
+            <img class=" product_item-img" src="./img/lan100.jpg" alt="Card image cap" width="100%" height ="200px">
+            <div class="card-block">
+              <h4 class="card-title product_item-name ">Lan mặt quỷ</h4>
+              <h4 class="product_item-price card-text ">Price: $88</h4>
+              <a href="#" data-name="Lan_mặt_quỷ" data-price="88" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+  
+        
+      </div>
+    </div>
+  </div>
+  
+    
+   <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-size: 2rem;
+          color: black;">Cart</h5>
+          <button type="button" style="font-size: 30px;" class="close" data-dismiss="modal" aria-label="Close">
+            <span  aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div style = "font-size:1.4rem">Total price: $<span  style = "font-size:1.4rem" class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Order now</button>
+          <button class="clear-cart btn btn-danger">Clear Cart</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="footer_content">
+      <h3 class="footer_content-heading">Mọi thắc mắc xin hệ với chủ shop Phương Thảo để biết thêm thông tin chi tiết:</h3>
+      <div class= "footer_button">
+        <i class="fas fa-phone-alt footer_icon"></i>
+        <p class="footer_pagrap">Phone: <a class="footer_content-subheading "  style="text-decoration: none;"  href="tel:+00 151515">+00 151515</a></p>
+      </div>
+
+      <div class="footer_button">
+        <i class="far fa-envelope footer_icon"></i>
+        <p class="footer_pagrap"> Email: <a style="text-decoration: none;" class="footer_content-subheading"href="mailto:@mail.com">thaophuong3694@mail.com</a></p> 
+      </div>
+     
+  </div>
+</footer>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

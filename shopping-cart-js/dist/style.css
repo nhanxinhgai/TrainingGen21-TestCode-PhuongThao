@@ -1,0 +1,33 @@
+.show-cart li {
+    display: flex;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card-img-top {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }
+  .card-block{
+    padding-bottom: 18px;
+  }
+  .btn{
+      display: block;
+      padding: 10px 12px;
+      margin: 0 auto;
+      font-size:1.4rem;
+      width: 100px;
+  }
+  .bg-inverse{
+      background-color:white!important;
+  }
+  .navbar{
+      position:absolute;
+      right:80px;
+      display: flex;
+      flex-direction: row;
+  }
+  .m-3{
+    margin: 0 !important;
+  }
